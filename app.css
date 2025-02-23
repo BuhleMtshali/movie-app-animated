@@ -8,10 +8,35 @@
 
 body{
     font-family: "Inter Tight", serif;
-    background-color: #212121;
+    background-color: var(--body-bg);
     color:whitesmoke;
     margin: 0;
 }
-h1{
-    margin: 0;
+
+.container{
+    width: 90dvw;
+    margin: 0 auto;
+    height: 100vh;
+    /* overflow: hidden; */
+    border: 2px solid green;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: auto;
+    gap: 10px;
+}
+
+header{
+    background-color: crimson;
+    height: 100%;
+    width: 100%;
+    /* grid-column: 1 / span 1; */
+    grid-column: 1 /  span 2;
+    
+}
+main{
+    background-color:cadetblue;
+    height: 100%;
+    width: 100%;
+    /* grid-column: 2 / span 3; */
+    grid-column: 3 / span 7;
 }
