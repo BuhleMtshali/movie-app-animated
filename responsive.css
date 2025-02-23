@@ -1,9 +1,30 @@
-/* @media (min-width: 768px) {
-    header {
-        grid-column: 1 / span 1;
-    }
-
-    main {
-        grid-column: 2 / span 3;
-    }
-} */
+/* 2xl */
+@media (max-width: 1536px) {
+   
+  }
+  
+  /* xl */
+  @media (max-width: 1280px) {
+    
+  }
+  
+  /* lg */
+  @media (max-width: 1024px) {
+   
+  }
+  
+  /* md */
+  @media (max-width: 768px) {
+   
+  }
+  
+  /* sm */
+  @media (max-width: 640px) {
+    
+  }
+  
+  /* xs */
+  @media (max-width: 475px) {
+    
+  }
+  

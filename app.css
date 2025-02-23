@@ -4,7 +4,8 @@
 :root{
     --body-bg:#212121;
     --main-divs-bg:#2C2C2C;
-    --active-color: #55A59A;
+    --active-color: #5CD7E5;
+    --body-color: #E4E4E4;
 }
 
 *{
@@ -18,7 +19,7 @@
 body{
     font-family: "Inter Tight", serif;
     background-color: var(--body-bg);
-    color:whitesmoke;
+    color:var(--body-color);
     margin: 0;
     height: 100vh;
     overflow: hidden;
@@ -33,7 +34,7 @@ body{
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: auto 1fr; /* Header auto height, main takes the rest */
-    gap: 10px;
+    gap: 15px;
     padding: 15px;
 }
 h1{
@@ -41,12 +42,16 @@ h1{
 }
 header{
     background-color: crimson;
-    /* height: 100%; */
+    height: 100vh;
     width: 100%;
     grid-column: 1 /  span 2;
     background-color: var(--main-divs-bg);
-    
+    padding: 10px;
+    border-radius: 30px;
+    justify-items: left;
 }
+
+
 main{
     background-color: cadetblue;
     width: 100%;
@@ -58,9 +63,37 @@ main{
     cursor: pointer;
     scrollbar-width: none;
     -ms-overflow-style: none; /* For Internet Explorer and Edge */
+    border-radius: 30px;
 }
 
 /* WebKit (Chrome, Safari) */
 main::-webkit-scrollbar {
     display: none;
+}
+
+/* logo styles */
+header nav .logo{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+header nav .logo h1{
+    font-size: 3.5rem;
+}
+
+header nav .logo h1 span{
+    color: var(--active-color);
+}
+
+header nav .logo .img-container{
+    width: 100px;
+    height: 100px;
+}
+
+header nav .logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
