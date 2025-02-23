@@ -25,6 +25,14 @@
   
   /* xs */
   @media (max-width: 475px) {
+    nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
     
+    .hidden-nav{
+        display: none;
+    }
   }
   

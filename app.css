@@ -30,7 +30,7 @@ body{
     width: 90dvw;
     margin: 0 auto;
     height: 100vh; /* Fill viewport height */
-    border: 2px solid green;
+    /* border: 2px solid green; */
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: auto 1fr; /* Header auto height, main takes the rest */
@@ -72,26 +72,31 @@ main::-webkit-scrollbar {
 }
 
 /* logo styles */
-header nav .logo{
+ nav .logo{
     display: flex;
     align-items: center;
     cursor: pointer;
+    padding: 13px;
 }
 
-header nav .logo h1{
-    font-size: 3.5rem;
+ nav .logo h1{
+    font-size: 2vw;
 }
 
-header nav .logo h1 span{
+ nav .logo h1 span{
     color: var(--active-color);
 }
 
-header nav .logo .img-container{
-    width: 100px;
-    height: 100px;
+ nav .logo .img-container{
+    /* width: 100px;
+    height: 100px; */
+    width: 6vw; /* Scale width with viewport */
+    height: 6vw; /* Keep height in sync for a square aspect ratio */
+    max-width: 100px; /* Optional: set a max size */
+    max-height: 100px; /* Optional: set a max size */
 }
 
-header nav .logo img{
+ nav .logo img{
     width: 100%;
     height: 100%;
     object-fit: cover;
