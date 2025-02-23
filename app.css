@@ -27,7 +27,7 @@ body{
 }
 
 .container{
-    width: 90dvw;
+    width: 90vw;
     margin: 0 auto;
     height: 100vh; /* Fill viewport height */
     /* border: 2px solid green; */
@@ -44,11 +44,14 @@ header{
     background-color: crimson;
     height: 100vh;
     width: 100%;
-    grid-column: 1 /  span 2;
+    grid-column: 1 /  span 1;
     background-color: var(--main-divs-bg);
     padding: 10px;
     border-radius: 30px;
     justify-items: left;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 
@@ -56,7 +59,7 @@ main{
     background-color: cadetblue;
     width: 100%;
     height: 100%; /* Fill the available height */
-    grid-column: 3 / span 7;
+    grid-column: 2 / span 7;
     background-color: var(--main-divs-bg);
     overflow-y: auto;
     scroll-behavior: smooth;
@@ -71,29 +74,35 @@ main::-webkit-scrollbar {
     display: none;
 }
 
+nav{
+    /* padding: 13px; */
+    /* width: 100%; */
+    
+}
 /* logo styles */
  nav .logo{
     display: flex;
     align-items: center;
+    justify-content: left;
     cursor: pointer;
-    padding: 13px;
+    margin-bottom: 20px;
 }
 
  nav .logo h1{
-    font-size: 2vw;
+    font-size: 1.4vw;
 }
 
  nav .logo h1 span{
-    color: var(--active-color);
+    background: linear-gradient(135deg, #FF5F6D, #FF7A85, #B16CEA, #6A89CC);
+    background-clip: text;
+    color: transparent;
 }
 
  nav .logo .img-container{
-    /* width: 100px;
-    height: 100px; */
-    width: 6vw; /* Scale width with viewport */
-    height: 6vw; /* Keep height in sync for a square aspect ratio */
-    max-width: 100px; /* Optional: set a max size */
-    max-height: 100px; /* Optional: set a max size */
+    width: 6rem; /* Scale width with viewport */
+    height: 6rem; /* Keep height in sync for a square aspect ratio */
+    max-width: 120px; /* Optional: set a max size */
+    max-height: 120px; /* Optional: set a max size */
 }
 
  nav .logo img{
@@ -102,3 +111,108 @@ main::-webkit-scrollbar {
     object-fit: cover;
     object-position: center;
 }
+
+/* mid nav styles */
+.mid-nav{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    cursor: pointer;
+    padding-left: 13px;
+    gap: 20px;
+}
+
+/* kids */
+.mid-kids{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 30px;
+    transition: all 0.4s ease-in-out;
+    border-radius: 20px;
+    padding: 4px;
+}
+
+/* nav icons */
+.icon i{
+    background: linear-gradient(135deg, #FF5F6D, #FF7A85, #B16CEA, #6A89CC);
+    background-clip: text;
+    color: transparent;
+    font-size: 2.3rem;
+}
+
+.mid-kids .text {
+    font-size: 1.3rem;
+    background: linear-gradient(135deg, #FF5F6D, #FF7A85, #B16CEA, #6A89CC);
+    color: var(--body-bg);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+    text-align: left;
+    margin: 0;
+}
+
+.mid-kids:hover {
+   background-color: var(--body-color);
+   width: 100%;
+   
+}
+
+/* horizontal line */
+.line{
+    height: 3px;
+    width: 100%;
+    border-radius: 3px;
+    background: linear-gradient(135deg, #FF5F6D, #FF7A85, #B16CEA, #6A89CC);
+}
+
+/* trending movie */
+/* .trending{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    border-radius: 20px;
+    margin-top: 30px;
+} */
+
+/* .trending h2{
+    margin: 20px 0;
+    font-size: 2rem;
+    background: linear-gradient(135deg, #FF5F6D, #FF7A85, #B16CEA, #6A89CC);
+    color: var(--body-bg);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+} */
+
+/* .trending-item{
+    width: 100%;
+    height: auto; 
+    aspect-ratio: 1 / 1; 
+    margin: auto;
+    border-radius: 20px;
+}
+
+.trending-item img{
+    width: 100%;
+    height: 100%;
+    object-fit:fill;
+    object-position: center;
+    border-radius: 20px;
+}
+
+.content{
+    width: 100%;
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6); 
+    color: #fff;
+    box-sizing: border-box;
+    border-radius: 20px;
+} */

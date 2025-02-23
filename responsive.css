@@ -30,9 +30,27 @@
         flex-direction: column;
         justify-content: center;
     }
-    
+
     .hidden-nav{
         display: none;
     }
+    .mid-nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 23px;
+    }
+    .mid-kids:hover {
+        background-color: var(--body-color);
+        box-sizing: border-box;
+        width: 70px;
+        height: 70px;
+        padding: 10px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     }
+
   }
   
