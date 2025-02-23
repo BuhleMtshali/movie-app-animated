@@ -1,9 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Berkshire+Swash&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=DynaPuff:wght@400..700&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oleo+Script:wght@400;700&family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
 
+
 :root{
     --body-bg:#212121;
     --main-divs-bg:#2C2C2C;
     --active-color: #55A59A;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+*:focus{
+    outline: none;
 }
 
 body{
@@ -11,32 +20,47 @@ body{
     background-color: var(--body-bg);
     color:whitesmoke;
     margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    scroll-behavior: smooth;
 }
 
 .container{
     width: 90dvw;
     margin: 0 auto;
-    height: 100vh;
-    /* overflow: hidden; */
+    height: 100vh; /* Fill viewport height */
     border: 2px solid green;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: auto;
+    grid-template-rows: auto 1fr; /* Header auto height, main takes the rest */
     gap: 10px;
+    padding: 15px;
 }
-
+h1{
+    margin: 0;
+}
 header{
     background-color: crimson;
-    height: 100%;
+    /* height: 100%; */
     width: 100%;
-    /* grid-column: 1 / span 1; */
     grid-column: 1 /  span 2;
+    background-color: var(--main-divs-bg);
     
 }
 main{
-    background-color:cadetblue;
-    height: 100%;
+    background-color: cadetblue;
     width: 100%;
-    /* grid-column: 2 / span 3; */
+    height: 100%; /* Fill the available height */
     grid-column: 3 / span 7;
+    background-color: var(--main-divs-bg);
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    cursor: pointer;
+    scrollbar-width: none;
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+/* WebKit (Chrome, Safari) */
+main::-webkit-scrollbar {
+    display: none;
 }
