@@ -30,9 +30,11 @@ body{
 header{
    width: 100%; 
    margin: auto;
-   height: 100px;
+   height: 120px;
    padding: 5px 17px;
    background-color: var(--main-divs-bg);
+   position: relative;
+   z-index: 100;
 }
 
 header nav{
@@ -105,7 +107,8 @@ nav .logo{
 .search-bar input{
     background: transparent;
     border: none;
-    width: 250px;
+    width: 100%;
+    max-width: 250px;
     color: var(--body-color);
     font-weight: 600;
     appearance: none;
@@ -127,3 +130,20 @@ nav .logo{
     font-size: 1.2rem;
     font-weight: bold;
   }
+
+
+/* menu bar */
+.menu-bar i  {
+    font-size: 2rem;
+    cursor: pointer;
+    background: linear-gradient(135deg, #FF5F6D, #FF7A85, #B16CEA, #6A89CC);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: all ease-in-out;
+    display: none;
+}
+
+.menu-bar i:hover{
+    color: var(--body-color);
+}
