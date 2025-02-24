@@ -6,6 +6,7 @@
     --main-divs-bg:#2C2C2C;
     --active-color: #5CD7E5;
     --body-color: #E4E4E4;
+    --linear-bg: linear-gradient(135deg, #FF5F6D, #FF7A85, #B16CEA, #6A89CC);
 }
 
 *{
@@ -26,193 +27,103 @@ body{
     scroll-behavior: smooth;
 }
 
-.container{
-    width: 90vw;
-    margin: 0 auto;
-    height: 100vh; /* Fill viewport height */
-    /* border: 2px solid green; */
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: auto 1fr; /* Header auto height, main takes the rest */
-    gap: 15px;
-    padding: 15px;
-}
-h1{
-    margin: 0;
-}
 header{
-    background-color: crimson;
-    height: 100vh;
-    width: 100%;
-    grid-column: 1 /  span 1;
-    background-color: var(--main-divs-bg);
-    padding: 10px;
-    border-radius: 30px;
-    justify-items: left;
-    overflow-y: auto;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+   width: 100%; 
+   margin: auto;
+   height: 100px;
+   padding: 5px 17px;
+   background-color: var(--main-divs-bg);
 }
 
-
-main{
-    background-color: cadetblue;
-    width: 100%;
-    height: 100%; /* Fill the available height */
-    grid-column: 2 / span 7;
-    background-color: var(--main-divs-bg);
-    overflow-y: auto;
-    scroll-behavior: smooth;
-    cursor: pointer;
-    scrollbar-width: none;
-    -ms-overflow-style: none; /* For Internet Explorer and Edge */
-    border-radius: 30px;
+header nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-/* WebKit (Chrome, Safari) */
-main::-webkit-scrollbar {
-    display: none;
-}
-
-nav{
-    /* padding: 13px; */
-    /* width: 100%; */
-    
-}
-/* logo styles */
- nav .logo{
+nav .logo{
     display: flex;
     align-items: center;
-    justify-content: left;
     cursor: pointer;
-    margin-bottom: 20px;
 }
 
- nav .logo h1{
-    font-size: 1.4vw;
+.logo .img-logo{
+    width: 90px;
+    height: 90px;
 }
 
- nav .logo h1 span{
-    background: linear-gradient(135deg, #FF5F6D, #FF7A85, #B16CEA, #6A89CC);
-    background-clip: text;
-    color: transparent;
-}
-
- nav .logo .img-container{
-    width: 6rem; /* Scale width with viewport */
-    height: 6rem; /* Keep height in sync for a square aspect ratio */
-    max-width: 120px; /* Optional: set a max size */
-    max-height: 120px; /* Optional: set a max size */
-}
-
- nav .logo img{
+.logo .img-logo img{
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
 }
 
-/* mid nav styles */
+.logo .logo-text{
+    margin: 0;
+    font-size: 1.4rem;
+    background: linear-gradient(135deg, #FF5F6D, #FF7A85, #B16CEA, #6A89CC);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* mid nav */
 .mid-nav{
     display: flex;
-    align-items: flex-start;
-    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.mid-nav a{
+    text-decoration: none;
+    color: var(--body-color);
+    font-weight: 600;
+    font-size: 1.4rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.mid-nav a:hover{
+    background: linear-gradient(135deg, #FF5F6D, #FF7A85, #B16CEA, #6A89CC);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* search bar */
+.search-bar{
+    display: flex;
+    align-items: center;
+    padding: 9px 14px;
+   border-radius: 20px;
+   border: 2px solid transparent;
+   background: linear-gradient(#2C2C2C, #2C2C2C) padding-box, 
+              linear-gradient(135deg, #FF5F6D, #FF7A85, #B16CEA, #6A89CC) border-box;
     cursor: pointer;
-    padding-left: 13px;
-    gap: 20px;
 }
 
-/* kids */
-.mid-kids{
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    gap: 30px;
-    transition: all 0.4s ease-in-out;
-    border-radius: 20px;
-    padding: 4px;
+.search-bar input{
+    background: transparent;
+    border: none;
+    width: 250px;
+    color: var(--body-color);
+    font-weight: 600;
+    appearance: none;
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
 }
 
-/* nav icons */
-.icon i{
-    background: linear-gradient(135deg, #FF5F6D, #FF7A85, #B16CEA, #6A89CC);
-    background-clip: text;
-    color: transparent;
-    font-size: 2.3rem;
-}
+/* For Chrome, Edge, Safari */
+.search-bar input::-webkit-search-cancel-button {
+    display: none;
+  }
+  
+  /* For Firefox */
+  .search-bar input[type="search"]::-moz-search-clear-button {
+    display: none;
+  }
 
-.mid-kids .text {
-    font-size: 1.3rem;
-    background: linear-gradient(135deg, #FF5F6D, #FF7A85, #B16CEA, #6A89CC);
-    color: var(--body-bg);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+  .search-bar i{
+    font-size: 1.2rem;
     font-weight: bold;
-    text-align: left;
-    margin: 0;
-}
-
-.mid-kids:hover {
-   background-color: var(--body-color);
-   width: 100%;
-   
-}
-
-/* horizontal line */
-.line{
-    height: 3px;
-    width: 100%;
-    border-radius: 3px;
-    background: linear-gradient(135deg, #FF5F6D, #FF7A85, #B16CEA, #6A89CC);
-}
-
-/* trending movie */
-/* .trending{
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    flex-direction: column;
-    width: 100%;
-    position: relative;
-    border-radius: 20px;
-    margin-top: 30px;
-} */
-
-/* .trending h2{
-    margin: 20px 0;
-    font-size: 2rem;
-    background: linear-gradient(135deg, #FF5F6D, #FF7A85, #B16CEA, #6A89CC);
-    color: var(--body-bg);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-} */
-
-/* .trending-item{
-    width: 100%;
-    height: auto; 
-    aspect-ratio: 1 / 1; 
-    margin: auto;
-    border-radius: 20px;
-}
-
-.trending-item img{
-    width: 100%;
-    height: 100%;
-    object-fit:fill;
-    object-position: center;
-    border-radius: 20px;
-}
-
-.content{
-    width: 100%;
-    position: absolute;
-    bottom: 0; 
-    left: 0;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.6); 
-    color: #fff;
-    box-sizing: border-box;
-    border-radius: 20px;
-} */
+  }
