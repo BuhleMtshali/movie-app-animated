@@ -10,11 +10,75 @@
   
   /* lg */
   @media (max-width: 1024px) {
+    /* Hide mid-nav and search bar on mobile */
+  .mid-nav,
+  .search-bar {
+    display: none;
+  }
+  
+  /* Show hamburger menu */
+  .menu-bar i {
+    display: block;
+  }
+  
+  /* When nav is toggled, show mobile menu */
+  nav.active .mid-nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--main-divs-bg);
+    padding: 10px 0;
+    z-index: 99;
+  }
+  
+  nav.active .mid-nav a {
+    padding: 10px 20px;
+  }
+  
+  /* Optionally, adjust header padding/height for mobile */
+  header {
+    padding: 10px 17px;
+  }
    
   }
   
   /* md */
   @media (max-width: 768px) {
+/* Hide mid-nav and search bar on mobile */
+  .mid-nav,
+  .search-bar {
+    display: none;
+  }
+  
+  /* Show hamburger menu */
+  .menu-bar i {
+    display: block;
+  }
+  
+  /* When nav is toggled, show mobile menu */
+  nav.active .mid-nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--main-divs-bg);
+    padding: 10px 0;
+    z-index: 99;
+  }
+  
+  nav.active .mid-nav a {
+    padding: 10px 20px;
+  }
+  
+  /* Optionally, adjust header padding/height for mobile */
+  header {
+    padding: 10px 17px;
+  }
    
   }
   
@@ -25,32 +89,38 @@
   
   /* xs */
   @media (max-width: 475px) {
-    nav{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .hidden-nav{
-        display: none;
-    }
-    .mid-nav{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 23px;
-    }
-    .mid-kids:hover {
-        background-color: var(--body-color);
-        box-sizing: border-box;
-        width: 70px;
-        height: 70px;
-        padding: 10px;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-     }
-
+    /* Hide mid-nav and search bar on mobile */
+  .mid-nav,
+  .search-bar {
+    display: none;
+  }
+  
+  /* Show hamburger menu */
+  .menu-bar i {
+    display: block;
+  }
+  
+  /* When nav is toggled, show mobile menu */
+  nav.active .mid-nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--main-divs-bg);
+    padding: 10px 0;
+    z-index: 99;
+  }
+  
+  nav.active .mid-nav a {
+    padding: 10px 20px;
+  }
+  
+  /* Optionally, adjust header padding/height for mobile */
+  header {
+    padding: 10px 17px;
+  }
+    
   }
   
