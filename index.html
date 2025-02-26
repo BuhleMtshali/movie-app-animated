@@ -6,6 +6,7 @@
 <title>MoovieHub</title>
 <link rel="stylesheet" href="app.css">
 <link rel="stylesheet" href="responsive.css">
+<script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
 <link rel="shortcut icon" href="assets/imgs/video-favicon.svg" type="image/x-icon" class="favicon">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <script src="https://kit.fontawesome.com/47ef0eeb2e.js" crossorigin="anonymous"></script>
@@ -47,17 +48,17 @@
             <div class="list">
             
             <!-- item 1 -->
-            <div class="item">
+            <div class="item carousel-item" >
             <div class="img-wrapper">
             <img src="assets/imgs/img2.png" alt="image one">
             <div class="overlay"></div>
             </div>
             <div class="content">
-            <div class="author">Lundev</div>
-            <div class="title">Design Slider</div>
-            <div class="topic">Animal</div>
+            <div class="author">Netflix</div>
+            <div class="title">Back in Action</div>
+            <div class="topic">Comedy</div>
             <div class="description">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias itaque provident voluptatem totam eos nihil ullam sequi, reiciendis, minus porro rem dolorum laudantium quo, aspernatur adipisci voluptatum quam repudiandae quos.
+            CIA NOC operatives Matt and his pregnant fiancée Emily are tasked by their superior and friend, Chuck, to obtain the key called the Industrial Control Systems (ICS) – a device that can control any electronic system. They must get it from the Polish KGB agent-turned terrorist Balthazzar Gor during his children's grandiose birthday party.
             </div>
             <div class="buttons">
             <button>SEE MORE</button>
@@ -75,18 +76,17 @@
             <div class="overlay"></div>
             </div>
             <div class="content">
-            <div class="author">Lundev</div>
-            <div class="title">Design Slider</div>
+            <div class="author">IMAX</div>
+            <div class="title">The Mummy</div>
             <div class="topic">Animal</div>
             <div class="description">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias itaque provident voluptatem totam eos nihil ullam sequi, reiciendis, minus porro rem dolorum laudantium quo, aspernatur adipisci voluptatum quam repudiandae quos.
+            In ancient Egypt, Princess Ahmanet is in line to rule over the pharaoh's kingdom, until the pharaoh sires a son. Knowing that her place to rule has been taken, she makes a deal with the deity Set and is given demonic powers through a ceremonial dagger. She murders her family and attempts to set the deity free, but is caught and mummified alive by Egyptian priests for her crimes. Her sarcophagus is then entombed in a region far away so she can never escape.
             </div>
             <div class="buttons">
             <button>SEE MORE</button>
             <button>Subscribe</button>
             </div>
             </div>  
-            <!-- ↑END OF CONTENT -->
             </div>
             <!-- end of item 2 -->
             
@@ -98,17 +98,16 @@
             </div>
             <div class="content">
             <div class="author">Lundev</div>
-            <div class="title">Design Slider</div>
-            <div class="topic">Animal</div>
+            <div class="title">Missão Porto Seguro</div>
+            <div class="topic">Comedy</div>
             <div class="description">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias itaque provident voluptatem totam eos nihil ullam sequi, reiciendis, minus porro rem dolorum laudantium quo, aspernatur adipisci voluptatum quam repudiandae quos.
+            Denise, uma policial rigorosa e antiquada, é escalada para uma missão de infiltração: ela deve desmantelar uma organização criminosa durante uma viagem de formatura para Porto Seguro. Contudo, para cumprir sua missão, ela precisa se adaptar a um grupo de jovens imprevisíveis, e conta com a ajuda de Babi, uma pessoa inusitada que se torna sua aliada inesperada. O cenário de festas, liberdade e confusão será um grande desafio para Denise, que precisará mudar sua visão de mundo para lidar com as situações mais inusitadas.
             </div>
             <div class="buttons">
             <button>SEE MORE</button>
             <button>Subscribe</button>
             </div>
             </div>  
-            <!-- ↑END OF CONTENT -->
             </div>
             <!-- end of item 3 -->
             
@@ -119,18 +118,17 @@
             <div class="overlay"></div>
             </div>
             <div class="content">
-            <div class="author">Lundev</div>
-            <div class="title">Design Slider</div>
-            <div class="topic">Animal</div>
+            <div class="author">Vieshow Cinemas Xinyi </div>
+            <div class="title">Weekend in Taipei</div>
+            <div class="topic">Action</div>
             <div class="description">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias itaque provident voluptatem totam eos nihil ullam sequi, reiciendis, minus porro rem dolorum laudantium quo, aspernatur adipisci voluptatum quam repudiandae quos.
+            John Lawlor, a DEA agent who goes undercover at a Chinese restaurant in Minneapolis to gather evidence of drug trafficking by a billionaire and disguised seafood merchant named Kwang, is forced to break cover due to a mistake by his colleague, rendering half a year of his undercover work in vain. 
             </div>
             <div class="buttons">
             <button>SEE MORE</button>
             <button>Subscribe</button>
             </div>
             </div>  
-            <!-- ↑END OF CONTENT -->
             </div>
             <!-- end of item 4 -->
 
@@ -140,42 +138,39 @@
         <!-- ↓ thumbmail images -->
           <div class="thumbnail">
             <div class="item">
-            <img src="assets/imgs/img1.png" alt="img one">
+            <img src="assets/imgs/img2.png" alt="img one">
             <div class="content">
-            <div class="title">Name Slider</div>
-            <div class="des">Description</div>
+            <div class="title">Back in Action</div>
+            <div class="des">Comedy</div>
             </div>
             <!-- end of content -->
             </div>
             <!-- end of item 1 -->
 
             <div class="item">
-            <img src="assets/imgs/img2.png" alt="img two">
+            <img src="assets/imgs/img1.png" alt="img two">
             <div class="content">
-            <div class="title">Name Slider</div>
-            <div class="des">Description</div>
+            <div class="title">The Mummy</div>
+            <div class="des">Action</div>
             </div>
-            <!-- end of content -->
             </div>
             <!-- end of item 1 -->
 
             <div class="item">
             <img src="assets/imgs/img3.png" alt="img one">
             <div class="content">
-            <div class="title">Name Slider</div>
-            <div class="des">Description</div>
+            <div class="title">Missão Porto Seguro</div>
+            <div class="des">Comedy</div>
             </div>
-            <!-- end of content -->
             </div>
             <!-- end of item 1 -->
 
             <div class="item">
             <img src="assets/imgs/img4.png" alt="img one">
             <div class="content">
-            <div class="title">Name Slider</div>
-            <div class="des">Description</div>
+            <div class="title">Weekend in Taipei</div>
+            <div class="des">Action</div>
             </div>
-            <!-- end of content -->
             </div>
             <!-- end of item 1 -->
           </div>  
